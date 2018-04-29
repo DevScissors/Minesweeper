@@ -75,13 +75,13 @@ const printBoard = board => {
   console.log(board.map(row => row.join('  |  ')).join('\n'));
 }
 
-let playerBoard = generatePlayerBoard (3, 4);
-let bombBoard = generateBombBoard (3, 4, 5);
+let playerBoard = generatePlayerBoard (7, 7);
+let bombBoard = generateBombBoard (7, 7, 15);
 
 console.log('Player Board: '); 
 printBoard(playerBoard);
 console.log('Bomb Board: ') 
 printBoard(bombBoard);
-flipTile(playerBoard, bombBoard, 0, 0);
+flipTile(playerBoard, bombBoard, 0, 3);
 console.log('Updated Player Board: ');
 printBoard(playerBoard);
