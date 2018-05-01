@@ -12,7 +12,7 @@ class Game {
     }
 
     else if (!this._board.hasNonBombEmptySpaces()) {
-      console.log('Congratulations on winning! Here was your winning board: ');
+      console.log('Congratulations on winning! \n Here was your winning board: ');
       this._board.print();
     }
     else {
@@ -36,7 +36,7 @@ class Board {
       return;
     }
     else if (this._bombBoard[rowIndex][columnIndex] === 'B') {
-      this._playerBoard[rowIndex][columnIndex] === 'B';
+      this._playerBoard[rowIndex][columnIndex] = 'B';
     }
     else {
       this._playerBoard[rowIndex][columnIndex] = this.getNumberOfNeighborBombs(rowIndex, columnIndex);
@@ -116,6 +116,3 @@ class Board {
     return board;
   }
 }
-
-const g = new Game(3, 3, 3);
-g.playMove(0, 0);
